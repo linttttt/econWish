@@ -16,12 +16,14 @@ import EditNoteOutlinedIcon from '@mui/icons-material/EditNoteOutlined';
 
 
 export default function Card2({user}) {
-    var { name, date, grade, imgSrc, wish, id } = user
+    
+    //Need date, or set the date on 6/10.
+    //var { name, date, grade, imgSrc, wish, id } = user
+    //date = date? date:"2023-06-10"
+    const { name, grade, imgSrc, wish, id } = user
+    var date = "2023-06-10"
 
     var [showFront, setShowFront] = useState(0)
-
-    //Need date, or set the date on 6/10.
-    date = date? date:"2023-06-10"
 
     function handleClipWish() {
         setShowFront(1)
