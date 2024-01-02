@@ -6,7 +6,7 @@ import appConfig from "./appConfig.json"
 import SearchAppBar from './components/SearchAppBar';
 import axios from 'axios';
 import { useState } from 'react';
-import Card2 from './components/Card2';
+import Card2 from './components/Finalcard';
 
 export default function App() {
 
@@ -56,7 +56,9 @@ function getUser(targetUser, pos) {
             grade: targetUser[pos.grade],
             imgSrc: targetUser[pos.imgSrc],
             wish: targetUser[pos.wish],
-            id: targetUser[pos.id]
+            id: targetUser[pos.id],
+
+            // date: targetUser[pos.date]
         }
     )
 }
@@ -71,6 +73,9 @@ function getUserPositionIndex(user0) {
     pos.name = pos.Name
     pos.grade = pos.Grade
     pos.wish = pos.Wish
+
+    // pos.date = pos.Timestamp
+
     return pos
 }
 
